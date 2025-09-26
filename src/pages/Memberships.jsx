@@ -53,7 +53,7 @@ const Memberships = () => {
         {plans.map((plan) => (
           <div
             key={plan.name}
-            className={`relative rounded-2xl border ${
+            className={`relative rounded-2xl hover:scale-105 transition-all duration-300 hover:border-slate-900 border ${
               plan.featured
                 ? "border-slate-900 shadow-xl"
                 : "border-slate-200 shadow-sm"
