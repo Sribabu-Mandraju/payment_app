@@ -40,6 +40,18 @@ const RootLayout = () => {
               <NavLink to="/refunds" className={navLinkClass}>
                 Refunds
               </NavLink>
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  `ml-2 inline-flex items-center rounded-md px-3 py-2 text-sm font-semibold transition-colors ${
+                    isActive
+                      ? "bg-slate-900 text-white"
+                      : "bg-slate-900 text-white hover:bg-slate-800"
+                  }`
+                }
+              >
+                Login
+              </NavLink>
             </nav>
 
             {/* Mobile menu button */}
@@ -111,6 +123,13 @@ const RootLayout = () => {
                 className={navLinkClass}
               >
                 Refunds
+              </NavLink>
+              <NavLink
+                onClick={() => setIsMenuOpen(false)}
+                to="/login"
+                className={navLinkClass}
+              >
+                Login
               </NavLink>
             </div>
           </div>
