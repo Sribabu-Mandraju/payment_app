@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import { FaLock } from "react-icons/fa";
 
 const navLinkClass = ({ isActive }) =>
   `px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -50,7 +51,10 @@ const RootLayout = () => {
                   }`
                 }
               >
-                Login
+                <div className="flex items-center gap-2">
+                  <FaLock />
+                  <div className="text-sm">Login</div>
+                </div>
               </NavLink>
             </nav>
 
